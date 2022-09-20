@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 19 18:45:11 2022
 
@@ -8,9 +8,9 @@ fonte: CEAGESP
 @author: CKT
 """
 
-
 import pandas as pd
 import requests
+
 
 
 # =============================================================================
@@ -31,6 +31,7 @@ dfs = pd.read_html(req.text)[0]
 
 
 
+
 # =============================================================================
 # Processamento dos dados 
 # =============================================================================
@@ -39,7 +40,7 @@ dfs = pd.read_html(req.text)[0]
 meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 alimentos = ['Frutas', 'Legumes', 'Verduras', 'Pescados']
 
-## Tabela final
+## Tabela final (DataFrame)
 tabelaMesesAlimentos = pd.DataFrame([],index=meses, columns=alimentos)
 
 ## Processamento dos dados
@@ -59,8 +60,14 @@ for i in range(0,len(meses)):
             textoSeparado = textoSeparado[textoSeparado.lower().find(alimentos[j].lower()):]
         
         tabelaMesesAlimentos.loc[meses[i],alimentos[j]] = textoSeparado.replace(alimentos[j].upper(), '').strip()
-        
-## Salva a tabela final ".CSV" (encoding para diferentes tipos de Sistemas Operacionais)
+    
+
+
+# =============================================================================
+# Salva a DataFrame final ".CSV"
+# =============================================================================
+
+## encoding para diferentes tipos de Sistemas Operacionais
 # tabelaMesesAlimentos.to_csv('tabela-safra-mensal-de-alimentos.csv',encoding='utf-8')
 # tabelaMesesAlimentos.to_csv('tabela-safra-mensal-de-alimentos.csv',encoding='utf-8-sig')
 tabelaMesesAlimentos.to_csv('tabela-safra-mensal-de-alimentos.csv',encoding='latin-1')

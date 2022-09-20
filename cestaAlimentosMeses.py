@@ -12,11 +12,11 @@ import pandas as pd
 import requests
 
 
-
 # =============================================================================
 # Scrape da tabela de alimentos da URL
 # =============================================================================
 
+## Página teste ONLINE - na WEB
 ## URL 
 url = "https://queroficarrico.com/blog/utilidade-domestica-periodo-de-safras-de-frutas-verduras-e-pescados/"
 
@@ -24,11 +24,17 @@ url = "https://queroficarrico.com/blog/utilidade-domestica-periodo-de-safras-de-
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
 ## Solicitação das informações da URL
-req = requests.get(url, headers=header)
+req = requests.get(url, headers=header).text
+
+
+# ## Página teste OFFLINE - na pasta local
+# with open("index.html", "r", encoding='utf-8') as file:
+#     req = file.read()
+# file.close()
+
 
 ## Scrape da URL solicitada
-dfs = pd.read_html(req.text)[0]
-
+dfs = pd.read_html(req)[0]
 
 
 

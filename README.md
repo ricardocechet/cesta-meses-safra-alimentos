@@ -1,7 +1,7 @@
-O código ajuda a listar os meses das safras de produtos alimentícios vendidos pela CEAJESP.
+O cÃ³digo ajuda a listar os meses das safras de produtos alimentÃ­cios vendidos pela CEAJESP.
 
-cesta-meses-safra-alimentos
-.py
+Codigo:
+cesta-meses-safra-alimentos.py
 
-
-Resultado uma planilha .CSV
+Resultado:
+  Gera uma planilha .CSV

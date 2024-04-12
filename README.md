@@ -26,4 +26,4 @@ python cestaAlimentosMeses.py
 ```
 
 ---
-por [Ricardo Cechet](https://github.com/ricardocechet) 😊
+por [Ricardo Cechet](https://github.com/ricardocechet) 🙂

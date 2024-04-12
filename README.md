@@ -9,7 +9,11 @@ cestaAlimentosMeses.py - Código em Python para fazer o raspagem das informaçõ
 ```
 
 ## ⚙️ Código
-Utiliza pacotes simples para fazer requisições (requests) e leitura e organização do html (pandas) da requisição realizada no site.
+Utiliza pacotes simples para fazer:
+
+* requisições no site da CEAJESP - requests
+
+* leitura e organização do html da requisição - pandas
 
 ## 📋 Resultado
 Gera uma planilha .CSV

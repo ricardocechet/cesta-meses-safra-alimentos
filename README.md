@@ -25,5 +25,5 @@ Para rodar, digite:
 python cestaAlimentosMeses.py
 ```
 
---
+---
 por [Ricardo Cechet](https://github.com/ricardocechet) 😊

@@ -18,9 +18,12 @@ Utiliza pacotes simples para fazer:
 ## 📋 Resultado
 Gera uma planilha .CSV
 
-### Rodar o Código
+## Rodar o Código
 
 Para rodar, digite:
 ```
 python cestaAlimentosMeses.py
 ```
+
+--
+por [Ricardo Cechet](https://github.com/ricardocechet) 😊
